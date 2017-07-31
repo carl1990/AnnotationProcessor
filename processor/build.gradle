@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":annotation")
+    implementation 'com.squareup:javapoet:1.7.0'
+    implementation 'com.google.guava:guava:22.0-android'
+//    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    compile project(path: ':annotation')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
